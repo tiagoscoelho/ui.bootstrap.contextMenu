@@ -120,7 +120,7 @@ angular.module('ui.bootstrap.contextMenu', [])
                 }
             } else if(winHeight <= menuHeight) {
                 // If it really can't fit, reset the height of the menu to one that will fit
-                angular.element($ul[0]).css({"height": winHeight - 5, "overflow-y": "scroll"});
+                angular.element($ul[0]).css({"height": (winHeight - 5) + "px", "overflow-y": "scroll"});
                 // ...then set the topCoordinate height to 0 so the menu starts from the top
                 topCoordinate = 0;
             } else if(winHeight - topCoordinate < menuHeight) {
